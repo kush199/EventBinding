@@ -1,0 +1,30 @@
+﻿<table>
+   <tr>
+       <th colspan="2">
+           Employee Details
+       </th>
+   </tr>
+    <tbody>
+        <tr>
+            <td>
+              FirstName
+            </td>
+            <td>
+                {{firstname}}
+            </td>
+        </tr>
+        <tr>
+            <td>LastName</td>
+            <td>{{lastname}}</td>
+        </tr>
+        <tr *ngIf="sharedetails">
+            <td>Age</td>
+            <td>{{age}}</td>
+        </tr>
+        <tr *ngIf="sharedetails">
+            <td>Gender</td>
+            <td>{{gender}}</td>
+        </tr>
+    </tbody>
+</table>
+<button type="button" (click)="onclick()">{{sharedetails?"Hide":"Share"}} details</button>
